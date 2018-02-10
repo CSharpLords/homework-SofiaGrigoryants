@@ -10,6 +10,6 @@ public class script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(new Vector3(10, 0, 0) * Time.deltaTime);
+        transform.Rotate(new Vector3(10, 0, 0) * 0.01f);
     }
 }
