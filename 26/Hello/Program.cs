@@ -15,7 +15,10 @@ namespace Hello {
 		}
 
 		static void SayHello(string name) {
-			// пиши код здесь
+            string[] Hello = {"Привет, ", "Здравствуй, ", "Добрый день, "};
+            Random rnd = new Random();
+            int value = rnd.Next(0, 3);
+            Console.WriteLine(Hello[value] + name);
 		}
 	}
 }

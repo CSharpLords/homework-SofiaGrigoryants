@@ -12,5 +12,14 @@ namespace SymbolLine {
 
 			Console.ReadLine();
 		}
+        private static void PrintSymbols(string str, int num)
+        {
+            string ast = str;
+            for (int i = 1; i <= num - 1; i++)
+            {
+                ast = ast + str;
+            }
+            Console.WriteLine(ast);
+        }
 	}
 }
