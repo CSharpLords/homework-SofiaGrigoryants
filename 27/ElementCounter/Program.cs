@@ -11,5 +11,17 @@ namespace ElementCounter {
 
 			Console.ReadLine();
 		}
+        private static int GetElementCount(int[] massive, int number)
+        {
+            int quantity = 0;
+            for (int i = 0; i < massive.Length; i++)
+            {
+                if (massive[i] == number)
+                {
+                    quantity = quantity + 1;
+                }
+            }
+            return quantity;
+        }
 	}
 }

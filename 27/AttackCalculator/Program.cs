@@ -12,6 +12,10 @@ namespace AttackCalculator {
 		}
 
 		static double GetReducedAttack(double health, double maxHealth, double maxAttack) {
+            double difference = maxHealth / health;
+            double attack = maxAttack / difference;
+
+            return attack;
 		}
 	}
 }
