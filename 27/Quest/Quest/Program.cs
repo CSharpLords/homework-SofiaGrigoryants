@@ -8,11 +8,11 @@ namespace Quest
 {
     class Program
     {
-        static int attack = 40;
+        static int attack = 30;
         static int health = 60;
 
-        static int enemyAttack = 30;
-        static int enemyHealth = 80;
+        static int enemyAttack = 20;
+        static int enemyHealth = 65;
 
         static void Main(string[] args)
         {
@@ -37,7 +37,7 @@ namespace Quest
                 if (num == 1)
                 {
                     Console.WriteLine("Осмотришь поле? Хорошо! Ты нашёл " + "меч. Теперь ты в лесу!");
-                    attack = attack + 15;
+                    attack = attack + 25;
                     Forest();
                 }
                 else if (num == 2)
@@ -79,13 +79,13 @@ namespace Quest
                 Console.WriteLine("Тебя бьют. Твоё здоровье: " + health);
                 enemyHealth = enemyHealth - attack;
                 Console.WriteLine("Теперь бьёшь ты. Здоровье разбойников: " + enemyHealth);
-                if (health == 0)
+                if (health <= 0)
                 {
                     Console.WriteLine("Ты умер! Конец игры!");
                     Console.ReadLine();
                     Environment.Exit(0);
                 }
-                if (enemyHealth == 0)
+                if (enemyHealth <= 0)
                 {
                     Console.WriteLine("Разбойники мертвы! Ты выиграл!");
                     Console.ReadLine();
