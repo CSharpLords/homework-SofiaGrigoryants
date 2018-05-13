@@ -15,7 +15,13 @@ namespace Quest_2
         static int enemyAttack = 20;
         static int enemyHealth = 65;
 
+        static int giantHealth = 80;
+        static int giantAttack = 40;
+
         static string[] story = { "Green fields have appeared long ago", "Green fields are guarded by the Guardian of the Field - by me" };
+
+        static string[] story2 = { "Савдо - маънои ҳаёти ман", "Ман дар ин ҷо якчанд муддат кор мекардам", "Ман тоҷик ҳастам" };
+
         static void Main(string[] args)
         {
             GreenFields();
@@ -53,7 +59,154 @@ namespace Quest_2
             if (answer3 == 2)
             {
                 Random rand = new Random();
-                int stor = rand.Next(
+                int stor = rand.Next(0, 2);
+
+                if (stor == 0)
+                {
+                    Console.WriteLine(story[0]);
+                }
+                if (stor == 1)
+                {
+                    Console.WriteLine(story[1]);
+                }
+            }
+        }
+
+        static void Dealer()
+        {
+            int money = 0;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Ты в лавке торговца. Что будешь делать?");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            ShowOption("1. Выберу локацию");
+            ShowOption("2. Продам коня");
+            ShowOption("3. Прослушаю историю торговца");
+            int answer5 = int.Parse(Console.ReadLine());
+            if (answer5 == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Выбирай");
+                ShowOption("1. Лес");
+                ShowOption("2. Зелёные поля");
+                ShowOption("3. Деревня");
+                int answer4 = int.Parse(Console.ReadLine());
+                if (answer4 == 1)
+                {
+                    Forest();
+                }
+                if (answer4 == 2)
+                {
+                    GreenFields();
+                }
+                if (answer4 == 3)
+                {
+                    Village();
+                }
+            }
+
+            if (answer5 == 2)
+            {
+                money = 100;
+                Console.WriteLine("Конь продан. Ты в лавке торговца. Что будешь делать?");
+                Console.ForegroundColor = ConsoleColor.Gray;
+                ShowOption("1. Выберу локацию");
+                ShowOption("2. Куплю меч");
+                ShowOption("3. Прослушаю историю торговца");
+                int answer6 = int.Parse(Console.ReadLine());
+                if (answer6 == 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Выбирай");
+                    ShowOption("1. Лес");
+                    ShowOption("2. Зелёные поля");
+                    ShowOption("3. Деревня");
+                    int answer4 = int.Parse(Console.ReadLine());
+                    if (answer4 == 1)
+                    {
+                        Forest();
+                    }
+                    if (answer4 == 2)
+                    {
+                        GreenFields();
+                    }
+                    if (answer4 == 3)
+                    {
+                        Village();
+                    }
+                }
+                if (answer6 == 2)
+                {
+                    if (money == 100)
+                    {
+                        Console.WriteLine("Ты купил меч!");
+                        attack = attack + 25;
+                    }
+                }
+                if (answer6 == 3)
+                {
+                    Random ra = new Random();
+                    int st = ra.Next(0, 3);
+                    if (st == 0)
+                    {
+                        Console.WriteLine(story2[0]);
+                    }
+                    if (st == 1)
+                    {
+                        Console.WriteLine(story2[1]);
+                    }
+                    if (st == 2)
+                    {
+                        Console.WriteLine(story2[2]);
+                    }
+                }
+            }
+
+            if (answer5 == 3)
+            {
+                Random ra = new Random();
+                int st = ra.Next(0, 3);
+                if (st == 0)
+                {
+                    Console.WriteLine(story2[0]);
+                }
+                if (st == 1)
+                {
+                    Console.WriteLine(story2[1]);
+                }
+                if (st == 2)
+                {
+                    Console.WriteLine(story2[2]);
+                }
+            }
+        }
+
+        static void Village()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Ты в деревне. Здесь бушует великан. Кажется, он напал на тебя! Что будешь делать?");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            ShowOption("1. Буду сражаться!");
+            ShowOption("2. Пойду на другую локацию");
+            int answer1 = int.Parse(Console.ReadLine());
+            if (answer1 == 1)
+            {
+                Console.WriteLine("Хорошо. Твоё здоровье: " + health + ", твоя сила: " + attack);
+                health = health - giantAttack;
+                Console.WriteLine("Тебя бьют. Твоё здоровье: " + health);
+                giantHealth = giantHealth - attack;
+                Console.WriteLine("Теперь бьёшь ты. Здоровье великана: " + giantHealth);
+                if (health <= 0)
+                {
+                    Console.WriteLine("Ты умер! Конец игры!");
+                    Console.ReadLine();
+                    Environment.Exit(0);
+                }
+                if (giantHealth <= 0)
+                {
+                    Console.WriteLine("Гигант мёртв! Ты выиграл!");
+                    Console.ReadLine();
+                    Environment.Exit(0);
+                }
             }
         }
 
@@ -81,8 +234,8 @@ namespace Quest_2
                 }
                 if (enemyHealth <= 0)
                 {
-                    Console.WriteLine("Разбойники мертвы! Ты выиграл!");
-                    health = 90;
+                    Console.WriteLine("Разбойники мертвы! Ты выиграл! Лови бонус!");
+                    health = 110;
                     Console.ReadLine();
                     Environment.Exit(0);
                 }
