@@ -37,24 +37,7 @@ namespace Quest_2
             int answer3 = int.Parse(Console.ReadLine());
             if (answer3 == 1)
             {
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Выбирай");
-                ShowOption("1. Лес");
-                ShowOption("2. Лавка торговца");
-                ShowOption("3. Деревня");
-                int answer4 = int.Parse(Console.ReadLine());
-                if (answer4 == 1)
-                {
-                    Forest();
-                }
-                if (answer4 == 2)
-                {
-                    Dealer();
-                }
-                if (answer4 == 3)
-                {
-                    Village();
-                }
+                ShowLocations();
             }
             if (answer3 == 2)
             {
@@ -63,47 +46,11 @@ namespace Quest_2
 
                 if (stor == 0)
                 {
-                    Console.WriteLine(story[0]);
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Выбирай локацию");
-                    ShowOption("1. Лес");
-                    ShowOption("2. Лавка торговца");
-                    ShowOption("3. Деревня");
-                    int answer4 = int.Parse(Console.ReadLine());
-                    if (answer4 == 1)
-                    {
-                        Forest();
-                    }
-                    if (answer4 == 2)
-                    {
-                        Dealer();
-                    }
-                    if (answer4 == 3)
-                    {
-                        Village();
-                    }
+                    ShowLocations();
                 }
                 if (stor == 1)
                 {
-                    Console.WriteLine(story[1]);
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Выбирай локацию");
-                    ShowOption("1. Лес");
-                    ShowOption("2. Лавка торговца");
-                    ShowOption("3. Деревня");
-                    int answer4 = int.Parse(Console.ReadLine());
-                    if (answer4 == 1)
-                    {
-                        Forest();
-                    }
-                    if (answer4 == 2)
-                    {
-                        Dealer();
-                    }
-                    if (answer4 == 3)
-                    {
-                        Village();
-                    }
+                    ShowLocations();
                 }
             }
         }
@@ -120,24 +67,7 @@ namespace Quest_2
             int answer5 = int.Parse(Console.ReadLine());
             if (answer5 == 1)
             {
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Выбирай");
-                ShowOption("1. Лес");
-                ShowOption("2. Зелёные поля");
-                ShowOption("3. Деревня");
-                int answer4 = int.Parse(Console.ReadLine());
-                if (answer4 == 1)
-                {
-                    Forest();
-                }
-                if (answer4 == 2)
-                {
-                    GreenFields();
-                }
-                if (answer4 == 3)
-                {
-                    Village();
-                }
+                ShowLocations();
             }
 
             if (answer5 == 2)
@@ -151,24 +81,7 @@ namespace Quest_2
                 int answer6 = int.Parse(Console.ReadLine());
                 if (answer6 == 1)
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Выбирай");
-                    ShowOption("1. Лес");
-                    ShowOption("2. Зелёные поля");
-                    ShowOption("3. Деревня");
-                    int answer4 = int.Parse(Console.ReadLine());
-                    if (answer4 == 1)
-                    {
-                        Forest();
-                    }
-                    if (answer4 == 2)
-                    {
-                        GreenFields();
-                    }
-                    if (answer4 == 3)
-                    {
-                        Village();
-                    }
+                    ShowLocations();
                 }
                 if (answer6 == 2)
                 {
@@ -176,29 +89,6 @@ namespace Quest_2
                     {
                         Console.WriteLine("Ты купил меч!");
                         attack = attack + 25;
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Выбирай локацию");
-                        ShowOption("1. Лес");
-                        ShowOption("2. Зелёные поля");
-                        ShowOption("3. Деревня");
-                        ShowOption("4. Лавка торговца");
-                        int answer4 = int.Parse(Console.ReadLine());
-                        if (answer4 == 1)
-                        {
-                            Forest();
-                        }
-                        if (answer4 == 2)
-                        {
-                            GreenFields();
-                        }
-                        if (answer4 == 3)
-                        {
-                            Village();
-                        }
-                        if (answer4 == 4)
-                        {
-                            Dealer();
-                        }
                     }
                 }
                 if (answer6 == 3)
@@ -208,85 +98,17 @@ namespace Quest_2
                     if (st == 0)
                     {
                         Console.WriteLine(story2[0]);
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Выбирай локацию");
-                        ShowOption("1. Лес");
-                        ShowOption("2. Зелёные поля");
-                        ShowOption("3. Деревня");
-                        ShowOption("4. Лавка торговца");
-                        int answer4 = int.Parse(Console.ReadLine());
-                        if (answer4 == 1)
-                        {
-                            Forest();
-                        }
-                        if (answer4 == 2)
-                        {
-                            GreenFields();
-                        }
-                        if (answer4 == 3)
-                        {
-                            Village();
-                        }
-                        if (answer4 == 4)
-                        {
-                            Dealer();
-                        }
                     }
                     if (st == 1)
                     {
                         Console.WriteLine(story2[1]);
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Выбирай локацию");
-                        ShowOption("1. Лес");
-                        ShowOption("2. Зелёные поля");
-                        ShowOption("3. Деревня");
-                        ShowOption("4. Лавка торговца");
-                        int answer4 = int.Parse(Console.ReadLine());
-                        if (answer4 == 1)
-                        {
-                            Forest();
-                        }
-                        if (answer4 == 2)
-                        {
-                            GreenFields();
-                        }
-                        if (answer4 == 3)
-                        {
-                            Village();
-                        }
-                        if (answer4 == 4)
-                        {
-                            Dealer();
-                        }
                     }
                     if (st == 2)
                     {
                         Console.WriteLine(story2[2]);
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Выбирай локацию");
-                        ShowOption("1. Лес");
-                        ShowOption("2. Зелёные поля");
-                        ShowOption("3. Деревня");
-                        ShowOption("4. Лавка торговца");
-                        int answer4 = int.Parse(Console.ReadLine());
-                        if (answer4 == 1)
-                        {
-                            Forest();
-                        }
-                        if (answer4 == 2)
-                        {
-                            GreenFields();
-                        }
-                        if (answer4 == 3)
-                        {
-                            Village();
-                        }
-                        if (answer4 == 4)
-                        {
-                            Dealer();
-                        }
                     }
                 }
+                ShowLocations();
             }
 
             if (answer5 == 3)
@@ -296,83 +118,14 @@ namespace Quest_2
                 if (st == 0)
                 {
                     Console.WriteLine(story2[0]);
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Выбирай локацию");
-                    ShowOption("1. Лес");
-                    ShowOption("2. Зелёные поля");
-                    ShowOption("3. Деревня");
-                    ShowOption("4. Лавка торговца");
-                    int answer4 = int.Parse(Console.ReadLine());
-                    if (answer4 == 1)
-                    {
-                        Forest();
-                    }
-                    if (answer4 == 2)
-                    {
-                        GreenFields();
-                    }
-                    if (answer4 == 3)
-                    {
-                        Village();
-                    }
-                    if (answer4 == 4)
-                    {
-                        Dealer();
-                    }
                 }
                 if (st == 1)
                 {
                     Console.WriteLine(story2[1]);
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Выбирай локацию");
-                    ShowOption("1. Лес");
-                    ShowOption("2. Зелёные поля");
-                    ShowOption("3. Деревня");
-                    ShowOption("4. Лавка торговца");
-                    int answer4 = int.Parse(Console.ReadLine());
-                    if (answer4 == 1)
-                    {
-                        Forest();
-                    }
-                    if (answer4 == 2)
-                    {
-                        GreenFields();
-                    }
-                    if (answer4 == 3)
-                    {
-                        Village();
-                    }
-                    if (answer4 == 4)
-                    {
-                        Dealer();
-                    }
                 }
                 if (st == 2)
                 {
                     Console.WriteLine(story2[2]);
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Выбирай локацию");
-                    ShowOption("1. Лес");
-                    ShowOption("2. Зелёные поля");
-                    ShowOption("3. Деревня");
-                    ShowOption("4. Лавка торговца");
-                    int answer4 = int.Parse(Console.ReadLine());
-                    if (answer4 == 1)
-                    {
-                        Forest();
-                    }
-                    if (answer4 == 2)
-                    {
-                        GreenFields();
-                    }
-                    if (answer4 == 3)
-                    {
-                        Village();
-                    }
-                    if (answer4 == 4)
-                    {
-                        Dealer();
-                    }
                 }
             }
         }
@@ -434,29 +187,7 @@ namespace Quest_2
                     Console.WriteLine("Разбойники мертвы! Ты выиграл! Лови бонус!");
                     health = 110;
                     attack = 60;
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Выбирай локацию");
-                    ShowOption("1. Лес");
-                    ShowOption("2. Зелёные поля");
-                    ShowOption("3. Деревня");
-                    ShowOption("4. Лавка торговца");
-                    int answer4 = int.Parse(Console.ReadLine());
-                    if (answer4 == 1)
-                    {
-                        Forest();
-                    }
-                    if (answer4 == 2)
-                    {
-                        GreenFields();
-                    }
-                    if (answer4 == 3)
-                    {
-                        Village();
-                    }
-                    if (answer4 == 4)
-                    {
-                        Dealer();
-                    }
+                    ShowLocations();
                 }
                 else
                 {
@@ -465,24 +196,7 @@ namespace Quest_2
             }
             else if (answer1 == 2)
             {
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Выбирай");
-                ShowOption("1. Зелёные поля");
-                ShowOption("2. Лавка торговца");
-                ShowOption("3. Деревня");
-                int answer2 = int.Parse(Console.ReadLine());
-                if (answer2 == 1)
-                {
-                    GreenFields();
-                }
-                if (answer2 == 2)
-                {
-                    Dealer();
-                }
-                if (answer2 == 3)
-                {
-                    Village();
-                }
+                ShowLocations();
                 
             }
             else
@@ -510,6 +224,34 @@ namespace Quest_2
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine(comment);
             Console.ForegroundColor = ConsoleColor.Gray;
+        }
+
+        static void ShowLocations()
+        {
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Выбирай локацию");
+            ShowOption("1. Лес");
+            ShowOption("2. Зелёные поля");
+            ShowOption("3. Деревня");
+            ShowOption("4. Лавка торговца");
+            int answer4 = int.Parse(Console.ReadLine());
+            if (answer4 == 1)
+            {
+                Forest();
+            }
+            if (answer4 == 2)
+            {
+                GreenFields();
+            }
+            if (answer4 == 3)
+            {
+                Village();
+            }
+            if (answer4 == 4)
+            {
+                Dealer();
+            }
         }
     }
 }
